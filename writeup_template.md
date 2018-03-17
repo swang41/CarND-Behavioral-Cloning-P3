@@ -71,7 +71,7 @@ The model was trained and validated on different data sets to ensure that the mo
 The model used
 * batch size: 64
 * adam optimizer with learning rate 0.001, so the learning rate was not tuned manually (model.py line 174).
-* $\lambda$ for l2: 0.001
+* &lambda for l2: 0.001
 * keep probability for dropout: 0.5
 * samples per eporch: 20032
 
