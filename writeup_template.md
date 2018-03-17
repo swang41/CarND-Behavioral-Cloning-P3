@@ -71,7 +71,7 @@ The model was trained and validated on different data sets to ensure that the mo
 The model used
 * batch size: 64
 * adam optimizer with learning rate 0.001, so the learning rate was not tuned manually (model.py line 174).
-* ![\lamda](https://latex.codecogs.com/svg.latex?x%3D%5Cfrac%7B-b%5Cpm%5Csqrt%7Bb%5E2-4ac%7D%7D%7B2a%7D) for l2: 0.001
+* &theta for l2: 0.001
 * keep probability for dropout: 0.5
 * samples per eporch: 20032
 
