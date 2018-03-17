@@ -123,4 +123,8 @@ Then I randomly horizontally shear the image thinking that this would give more 
 
 ![alt text][image6] 
 
-Finally I split the udacity data and some extra data into training and validation data, and feed them into a generator function where random data augmentation will be applied and suppress the number of data with minor angle. Then I trained the model with fit_generator and at eporch 14, I got a model which is able to complete both tracks without leaving the road.
+Finally I split the udacity data and some extra data into training and validation data, and feed them into a generator function where random data augmentation will be applied and suppress the number of data with minor angle. 
+
+Then I trained the model with fit_generator and at eporch 14, I got a model which is able to complete both tracks without leaving the road.
+
+![alt text][./track1.git] 
