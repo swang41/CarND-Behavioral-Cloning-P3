@@ -23,6 +23,8 @@ The goals / steps of this project are the following:
 [image4]: ./examples/flip.png "Flipped Image"
 [image5]: ./examples/bright.png "Brightened Image"
 [image6]: ./examples/shear.png "Sheared Image"
+[video1]: ./track1.gif
+[video2]: ./track2.gif
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
@@ -127,4 +129,8 @@ Finally I split the udacity data and some extra data into training and validatio
 
 Then I trained the model with fit_generator and at eporch 14, I got a model which is able to complete both tracks without leaving the road.
 
-![alt text](./track1.gif) 
+Video for Track One:
+![alt text][video1] 
+
+Video for Track Two:
+![alt text][video2] 
