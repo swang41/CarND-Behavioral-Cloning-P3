@@ -127,4 +127,4 @@ Finally I split the udacity data and some extra data into training and validatio
 
 Then I trained the model with fit_generator and at eporch 14, I got a model which is able to complete both tracks without leaving the road.
 
-![alt text][./track1.git] 
+![alt text][./track1.gif] 
