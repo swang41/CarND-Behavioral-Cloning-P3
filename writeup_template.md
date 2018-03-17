@@ -18,12 +18,11 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/model.PNG "Model Visualization"
-[image2]: ./examples/placeholder.png "Grayscaling"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
-[image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
+[image2]: ./examples/multiple_cameras.png "Multiple Cameras"
+[image3]: ./examples/multiple_cameras_angle.png "Multiple Cameras 1"
+[image4]: ./examples/flip.png "Flipped Image"
+[image5]: ./examples/bright.png "Brightened Image"
+[image6]: ./examples/shear.png "Sheared Image"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
@@ -106,28 +105,22 @@ Here is a visualization of the architecture (note: visualizing the architecture 
 
 #### 3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+To get more approriate data I first use multiple cameras and add corresponding steering adjustment:
 
 ![alt text][image2]
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
+
+To augment the data sat, I also flipped images and angles thinking that this would give more data point with bigger steering and symmetrize the distribution of steering angle. For example, here is an image that has then been flipped:
 
 ![alt text][image3]
+
+
+Then I randomly brighten the image thinking that color of track two is lighter than track one. Randomly brightness may help us with training more generalized model. here is an image that has then been randomly brightened:
+
 ![alt text][image4]
-![alt text][image5]
 
-Then I repeated this process on track two in order to get more data points.
+Then I randomly horizontally shear the image thinking that this would give more data with more variety of steering angle. here is an image that has then been randomly brightened:
 
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
-
-![alt text][image6]
-![alt text][image7]
-
-Etc ....
-
-After the collection process, I had X number of data points. I then preprocessed this data by ...
-
-
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
+![alt text][image5] 
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
