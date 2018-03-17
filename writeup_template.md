@@ -101,30 +101,30 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
 
-![alt text][image1]
+![Model Summary][image1]
 
 #### 3. Creation of the Training Set & Training Process
 
 To get more approriate data I first use multiple cameras and add corresponding steering adjustment:
 
-![alt text][image2]
+![Image][image2]
 
 
 To augment the data sat, I also flipped images and angles thinking that this would give more data point with bigger steering and symmetrize the distribution of steering angle. For example, here is an image that has then been flipped:
 
-![alt text][image4]
+![Flipped Image][image4]
 
 
 Then I randomly brighten the image thinking that color of track two is lighter than track one. Randomly brightness may help us with training more generalized model. here is an image that has then been randomly brightened:
 
-![alt text][image5]
+![Brightened Image][image5]
 
 Then I randomly horizontally shear the image thinking that this would give more data with more variety of steering angle. here is an image that has then been randomly brightened:
 
-![alt text][image6] 
+![Sheared Image][image6] 
 
 Finally I split the udacity data and some extra data into training and validation data, and feed them into a generator function where random data augmentation will be applied and suppress the number of data with minor angle. 
 
 Then I trained the model with fit_generator and at eporch 14, I got a model which is able to complete both tracks without leaving the road.
 
-![alt text] (./track1.gif) 
+![alt text](./track1.gif) 
