@@ -56,19 +56,24 @@ The model.py file contains the code for training and saving the convolution neur
 
 #### 1. An appropriate model architecture has been employed
 
-My model consists of a convolution neural network with 3x3 filter sizes and depths between 32 and 128 (model.py lines 18-24) 
+Nvidia neural network is used. It consists of a convolution neural network with 5x5 and 3x3 filter  and depths between 24 and 64 (model.py lines 183-200) 
 
-The model includes RELU layers to introduce nonlinearity (code line 20), and the data is normalized in the model using a Keras lambda layer (code line 18). 
+The model includes ELU layers to introduce nonlinearity and better convergence due to implicit batch-norm (code lines 183-200), and the data is normalized in the model using a Keras lambda layer (code line 184). 
 
 #### 2. Attempts to reduce overfitting in the model
 
-The model contains dropout layers in order to reduce overfitting (model.py lines 21). 
+The model contains dropout layers in order to reduce overfitting and time complexity (model.py lines 196) and l2 regulation in both convolutional and fully connected layers except last two fully connected layers(code lines 185-198).
 
-The model was trained and validated on different data sets to ensure that the model was not overfitting (code line 10-16). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
+The model was trained and validated on different data sets to ensure that the model was not overfitting (code lines 155-157). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
 #### 3. Model parameter tuning
 
-The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 25).
+The model used
+* batch size: 64
+* adam optimizer with learning rate 0.001, so the learning rate was not tuned manually (model.py line 174).
+* $\lambda$ for l2: 0.001
+* keep probability for dropout: 0.5
+* samples per eporch: 20032
 
 #### 4. Appropriate training data
 
